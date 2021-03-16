@@ -22,7 +22,7 @@ By Lemma 2.2.6, c = d. (Proof of uniqueness)
 
 Assume P(a) is true i.e. There exists exactly 1 natural number d s.t. d++ = a.  
 To prove P(a++) true i.e. There exists exactly 1 natural number d s.t d++ = a++.  
-Let d = a. Then d++ = a++ by definition (Proof of existence)
+Let d = a. Then d++ = a++ by definition (Proof of existence)   
 Suppose there are 2 positive natural numbers e and f s.t. e++ = a++ and f++ = a++.  
 By transitivity, e++ = f++.
 By Lemma 2.2.6, e = f (Proof of uniqueness)
