@@ -1,3 +1,34 @@
+Proof of additive commutativity:      
+
+Claim: For any natural numbers n and m, n + m = m + n.      
+
+Using induction on n (keeping m fixed).     
+Base case: n = 0, 0+m = m = m+0 by Lemma 2.2.2 and definition of addition
+on the natural numbers.
+Assume P(k) is true i.e. k+m = m+k for any natural number k     
+To prove P(k+1) true i.e.(k++)+m = m+(k++)      
+LHS = (k++)+m     
+    = (k+m)++ by definition of addition     
+    = (m+k)++ by inductive hypothesis P(k)      
+    = m+(k++) by Lemma 2.2.3 = RHS      
+
+QED.
+
+Proof of cancellation law:      
+
+Claim: Let a,b,c be natural numbers s.t. a+b = a+c. Then b=c.     
+
+Using induction on a (keeping b and c fixed).     
+Base case: 0+b = 0+c, b=c by definition of addition.      
+Assume P(n) is true i.e. n+b = n+c => b=c for any natural number n.
+To prove P(n+1) true i.e. (n++)+b = (n++)+c => b=c.     
+(n++)+b = (n+b)++     
+(n++)+c = (n+c)++     
+By Axiom 2.4, n+b = n+c.      
+By inductive hypothesis, b=c.     
+
+QED.
+
 Ex 2.2.1. Prove (a+b)+c = a+(b+c).  
 
 Fix a and b as constants, do induction on c.  
