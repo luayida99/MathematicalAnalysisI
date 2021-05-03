@@ -82,4 +82,30 @@ By Definition 3.1.4, A = A u A = A u empty.
 By transitivity of the union operation, A u empty = empty u A.        
 By associativity of =, the claim follows.       
 
-QED.        
+QED.
+
+Ex 3.1.5 Let A, B be sets. Show that A subset B, A u B = B, A n B = A are
+logically equivalent.       
+
+A subset B => A u B = B:        
+By Definition 3.1.15, for any x, x element A => x element B.      
+Hence every element in A is also in B.        
+Suppose x is an element of B.       
+By Axiom 3.4, x is element of B u A and hence A u B (by associativity of u).                
+Suppose x is an element of A u B. By Axiom 3.4, x is either element of A or B.      
+If x is element of B, argument is the same as above.      
+if x is element of A, since every element of A is in B, x is in B.        
+
+A u B = B => A n B = A:
+Suppose there exists a x s.t. it is element of A but not element of A n B.        
+Then x must be in A but not in B. But this is a contradiction as the existence        
+of such a x must imply that A u B != B.         
+
+A n B = A => A subset B:        
+Suppose x is an element of A n B. By Definition 3.1.23, x is element of A and
+B.          
+By definition of set equality, all elements in A n B are in A and vice versa.       
+If x is in A, then it must be in B as well from A n B = A. Thus for any object          
+y, y is element of A => y is element of B, which is the definition of subset.       
+
+QED.         
