@@ -1,5 +1,5 @@
 Integers: Starting with NxN space, place an equivalence relation ~ on (a,b)         
-s.t. (a,b)~(c,d) <=> a+d = b+c. a--b = {(c,d) element of NxN:(a,b)~(c,d)}.        
+s.t. (a,b) ~ (c,d) <=> a+d = b+c. a--b = {(c,d) element of NxN:(a,b)~(c,d)}.        
 
 Ex 4.1.1 Verify that equality on integers is an equivalence relation:         
 
