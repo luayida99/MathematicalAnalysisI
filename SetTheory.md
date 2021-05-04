@@ -108,4 +108,75 @@ By definition of set equality, all elements in A n B are in A and vice versa.
 If x is in A, then it must be in B as well from A n B = A. Thus for any object          
 y, y is element of A => y is element of B, which is the definition of subset.       
 
-QED.         
+QED.        
+
+Ex 3.1.6 Prove Proposition 3.1.28.        
+Let A, B, C be sets, X be set where A B C are subsets.        
+(a) Minimal element       
+By definition of union, A u empty implies that any object x is either        
+an element of A or the empty set. Since empty set has no elements, any object x       
+must belong in A.       
+
+By definition of intersection, A n empty implies that any object x is in both       
+A and the empty set. Since empty set has no elements, any object x must belong          
+in A.               
+
+(b) Maximal element         
+A u X = X follows from definition of union, and A subset X.       
+A n X = A follows from definition of intersection, and A subset X.        
+
+(c) Identity      
+A n A implies that any object x belonging to it is either in A or A. Hence any x is in         
+A.        
+A u A implies that any object x belonging to it is in both A and A. Hence any         
+x is in A.          
+
+(d) Commutativity         
+Above.        
+
+(e) Associativity       
+Above.        
+
+(f) Distributivity        
+Consider any object x belonging to A n (B u C).        
+A n (B u C) => x in both A and (B u C)        
+x in (B u C) => x is B or C       
+Hence x in both A and (B or C) => x in (A and B) or (A and C)       
+=> A n (B u C) subset (A n B) u (A n C)        
+Similar argument can be made for reverse claim.         
+
+Consider any object x belonging to A u (B n C).         
+A u (B n C) => x in A or (B n C)        
+x in (B n C) => x in both B and C       
+Hence x in A or (B and C) => x in (A or B) and (A or C)       
+=> A u (B n C) subset (A u B) n (A u C)          
+Similar argument can be made for reverse claim.         
+
+(g) Partition           
+Consider object x in A u (X\A).         
+x in A or X\A => x in A or in X without A => x always in X as A subset X        
+Reverse claim is trivially true.        
+
+Consider object x in A n (X\A).         
+x in A and X\A => x in A and not in A => empty set        
+Reverse claim is trivially true.        
+
+(h) De Morgan's Laws        
+Consider an object x in X \ (A u B).        
+x is in X but not in either A or B. This implies that x must be in both       
+X\A and X\B. Hence X \ (A u B) subset (X\A) n (X\B).         
+The reverse claim uses the same reasoning.        
+
+Consider an object x in X \ (A n B).          
+x is in X but not in both A and B. This implies that x must be in either X\A          
+or X\B. Hence X\ (A n B) subset (X\A) u (X\B).        
+The reverse claim uses the same reasoning.        
+
+Ex 3.1.11 Show that the axiom of replacement implies axiom of specification.         
+The axiom of replacement states that z is an element of {y: Q(x,y) true for         
+some x element of A} <=> Q(x,z) is true for some x element of A.        
+
+Choose Q(x,y) = y and P(x). Applying the axiom of replacement yields        
+{y: Q(x,y) is true for some x element of A} = {x element of A: x = x and P(x)}        
+which is equivalently {x element of A: P(x) is true}, the axiom of
+specification.        
