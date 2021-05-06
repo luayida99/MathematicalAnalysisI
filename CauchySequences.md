@@ -22,3 +22,29 @@ steady sequence, and both these sequences are bounded by max(|ar|, epsilon),
 the claim follows easily.           
 
 QED.            
+
+Given that an and bn are equivalent sequences, prove that an is Cauchy sequence
+<=> bn is Cauchy sequence.            
+
+(=>): Let an and bn be equivalent sequences, epsilon>0 be given. Then             
+|an-bn| < epsilon/3, for all n > N0 element of N. Assume an is a Cauchy sequence,           
+then |am-an|< epsilon/3, for all m,n > N1 element of N.            
+Then for any N = max(N0,N1),
+|bm-bn| = |bm-am+am-an+an-bn|           
+        <= |bm-am|+|bn-an|+|am-an|
+        < epsilon
+(<=): Symmetric argument.         
+
+QED.             
+
+Let epsilon>0. Show that if an and bn are eventually epsilon-close, an is           
+bounded <=> bn is bounded.            
+
+(=>): Let an and bn be epsilon-close sequences, epsilon>0 be given. Then          
+|an-bn| < epsilon, for all n > N0 element of N. Assume an is bounded, hence            
+|ai| < M for some M >= 0, 1 <= i element of N .           
+|bi| = |bi-ai+ai| <= |ai-bi| + |ai| < epsilon + M           
+Hence bn is epsilon+M bounded.          
+(<=): Symmetric argument.           
+
+QED.           
