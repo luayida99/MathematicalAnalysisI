@@ -36,4 +36,31 @@ bounded by some M. Choosing N = N1,
 Choose epsilon1 = epsilon/M, it follows that anbn is eventually epsilon close               
 to an'bn.           
 
-QED.                           
+QED.
+
+Ex 5.3.4 For ratioanls a,b, prove that a=b <=> LIM(n -> INF)a = LIM(n -> INF) b.           
+
+(=>): a = b => |a - b| = 0 < epsilon.         
+(<=): Proof by contrapositive. Suppose a != b. Then for some n >= N1 there            
+exists an epsilon s.t. |a - b| > epsilon > 0. Since a != b, |a - b|/2 > 0.          
+Choose epsilon as |a - b|/2 then we have |a - b| > epsilon hence            
+LIM(n -> INF)a = LIM(n -> INF)b.            
+
+QED.          
+
+Let an be a bounded sequence and bn be another sequence equivalent to an. Show              
+bn is also bounded.             
+
+Since an equivalent to bn, we have that an is eventually epsilon-close to bn.         
+Choose epsilon = 1, by Exercise 5.2.2 bn is bounded.            
+
+QED.          
+
+Ex 5.3.5 Prove LIM(n -> INF) 1/n = 0.           
+
+Let epsilon > 0 be given. By Proposition 4.4.1 there exists N > 1/epsilon.            
+For some n >= N, n >= 1/epsilion > 0 => 0 < 1/n <= epsilon. Since |1/n - 0|             
+= 1/n <= epsilon.             
+
+QED.            
+
