@@ -37,4 +37,51 @@ Hence at least 1 claim is true.
 
 Since at least and at most 1 claim is true, it follows that only 1 claim can be true.     
 
-QED.                                        
+QED.                                       
+
+Ex 5.4.2 Prove Proposition 5.4.7.               
+
+Consider 3 real numbers x,y,z.              
+
+(a) Trichotomy of order:          
+Consider the real number x-y. By Proposition 5.4.4, x-y is either zero, positive or negative.
+x-y = 0 => x = y              
+x-y < 0 => x < y            
+x-y > 0 => x > y              
+Hence at least 1 claim is true.               
+Assume more than 1 claim is true, then a similar breakdown of cases shows there always is a contradiction.          
+
+(b) x < y <=> y > x:                                                                      
+(=>): x < y => x-y < 0 => y-x > 0 (Proposition 5.4.4) => y > x           
+(<=): y > x => y-x > 0 => x-y < 0 (Proposition 5.4.4) => x < y                  
+
+(c) x < y and y < z => x < z:                 
+x-y < 0 and y-z < 0 => (x-y)+(y-z) < 0 => x-z < 0 => x < z                  
+
+(d) x < y => x+z < y+z:               
+x-y < 0 => (x+z)-(y+z) < 0 => x+z < y+z                 
+
+(e) x < y and z is positive => xz < yz:             
+y-x > 0 => (y-x)z > 0 => xz < yz                
+
+QED.              
+
+Ex 5.4.3 Show that for every real number x there is exactly 1 integer N s.t. N <= x < N + 1.                    
+
+Notice that x = LIM(n -> INF)an where an is a Cauchy sequence. Hence for all j >= N, |aj - aN| < epsilon1.              
+-epsilon1 < aj - aN < epsilon1 => aN + epsilon1 < aj < aN + epsilon1 by Proposition 4.3.3.                                  
+Choose epsilon1 = 1/2 and set an = aN for all n < N, then it follows that this sequence is equivalent and     
+Cauchy. By Corollory 5.4.10 it follows that aN - 1/2 <= x <= aN + 1/2.                                           
+By Proposition 4.4.1, we can find a M s.t. M <= aN < M+1.             
+M - 1 <= aN - 1 < aN - 1/2 <= x < M + 1 + 1/2 < M + 2 => M - 1 < x < M + 2                
+Order trichotomy then guarantees the existence of an integer satisfying the inequality.             
+x < M => M - 1 <= x < M               
+x >= M, x < M + 1 => M <= x < M + 1, x >= M + 1 => M + 1 <= x < M + 2                 
+This proves the existence of an integer s.t. N <= x < N + 1.                
+
+Now suppose that N is not unique. Then there exist n, m s.t. n <= x < n+1 and m <= x < m+1, n != m.               
+n < m => n < m <= x < m+1. By definition of order we have m = n+d, n+1 = m+d' for positive integers d,d'.                 
+n+1 = n+d+d' => d+d' = 1 which is a contradiction since d,d' are positive integers.                         
+This completes the proof of uniqueness of N.                
+
+QED.                                             
