@@ -86,3 +86,38 @@ The n > m case is identical, and can be proven by n = m, m = n.
 This completes the proof of uniqueness of N.                
 
 QED.                                             
+
+Ex 5.4.4 Show that for any positive real number x there exists a positive integer N s.t. x > 1/N > 0.         
+
+By Proposition 5.4.8, 1/x is also a positive real number.
+1/x <= M < M + 1 => 1/(M+1) < x. Choose N = M + 1.            
+
+QED.              
+
+Ex 5.4.5 Given any 2 reals x < y, we can find a rational q s.t. x < q < y.                                  
+
+Notice y-x > 0. By Ex 5.4.4 there exists a positive integer N s.t. y-x > 1/N > 0.                   
+Ny - Nx > 1             
+By Ex 5.4.3, there is exactly 1 integer k s.t. k <= Nx < k+1.                 
+Ny > Nx + 1 >= k + 1 > Nx => x < (k+1)/N < y. Choose q = (k+1)/N.             
+
+QED.              
+
+Ex 5.4.6 Let x,y be reals and let epsilon>0 be positive real. Show |x-y| < eps <=>  y-eps < x < y+eps, and            
+|x-y| < eps <=> y-eps <= x <= y+eps.                            
+
+(=>): |x-y| < eps.                  
+x-y >= 0 => -eps < 0 <= x - y < eps => y-eps < x < y+eps              
+x-y < 0 => -eps < 0 < y-x < eps => -y-eps < -x < -y+eps  => x+y+eps-y-eps < x+y+eps-x and                     
+x+y-eps-x < x+y-eps-y+eps => x < y+eps and y-eps < x => y-eps < x < y+eps.              
+
+(<=): y-eps < x < y+eps => -eps < x-y < eps               
+Since x and y are reals, x-y is also a real number. Invoking trichotomy, we have 3 cases.                             
+x-y = 0: |x-y| = 0 < eps                 
+x-y > 0: |x-y| = x-y < eps                                      
+x-y < 0: |x-y| = y-x = -(x-y)           
+-eps+eps-(x-y) < eps-(x-y)+(x-y) => -(x-y) < eps                
+
+The nonstrict inequality uses the same reasoning.           
+
+QED.              
