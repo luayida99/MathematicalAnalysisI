@@ -81,7 +81,8 @@ This proves the existence of an integer s.t. N <= x < N + 1.
 
 Now suppose that N is not unique. Then there exist n, m s.t. n <= x < n+1 and m <= x < m+1, n != m.               
 n < m => n < m <= x < m+1. By definition of order we have m = n+d, n+1 = m+d' for positive integers d,d'.                 
-n+1 = n+d+d' => d+d' = 1 which is a contradiction since d,d' are positive integers.                         
+n+1 = n+d+d' => d+d' = 1 which is a contradiction since d,d' are positive integers.                       
+The n > m case is identical, and can be proven by n = m, m = n.                  
 This completes the proof of uniqueness of N.                
 
 QED.                                             
