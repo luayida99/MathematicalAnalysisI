@@ -103,7 +103,7 @@ Ny > Nx + 1 >= k + 1 > Nx => x < (k+1)/N < y. Choose q = (k+1)/N.
 
 QED.              
 
-Ex 5.4.6 Let x,y be reals and let epsilon>0 be positive real. Show |x-y| < eps <=>  y-eps < x < y+eps, and            
+Ex 5.4.6 Let x,y be reals and let eps>0 be positive real. Show |x-y| < eps <=>  y-eps < x < y+eps, and            
 |x-y| < eps <=> y-eps <= x <= y+eps.                            
 
 (=>): |x-y| < eps.                  
@@ -121,3 +121,27 @@ x-y < 0: |x-y| = y-x = -(x-y)
 The nonstrict inequality uses the same reasoning.           
 
 QED.              
+
+Ex 5.4.7 Let x,y be reals and eps>0 be positive real. Show x <= y+eps <=> x <= y and |x-y| <= eps                         
+<=> x = y.              
+
+(=>): x <= y+eps. Suppose x > y => x-y > 0 => (x-y)/2 > 0. Set eps = (x-y)/2,             
+x <= y + (x-y)/2 => x <= y, which is a contradiction.           
+(<=): x <= y < y+eps.             
+
+(=>): |x-y| <= eps. Suppose x != y, then |x-y| > 0 => |x-y|/2 > 0. Set eps = |x-y|/2,                  
+|x-y| <= |x-y|/2 => |x-y| <= 0, which is a contradiction.             
+(<=): x = y => |x-y| = 0 < eps.            
+
+QED.            
+
+Ex 5.4.8 Let an be a Cauchy sequence of rationals, x be a real number. Show that an <= x for all n >= 1               
+=> LIM(n -> INF)an <= x. Similarly show an >= x => LIM(n -> INF)an >= x.            
+
+an <= x. Suppose LIM(n -> INF)an > x. By Proposition 5.4.14 there exists a rational q s.t. LIM(n -> INF)an > q > x.               
+Consider the Cauchy sequence with all terms q. By Corollory 5.4.10, LIM(n -> INF)an <= LIM(n -> INF)q = q.              
+But LIM(n -> INF)an is both < q and >= q, which is a contradiction.             
+
+The other claim follows the exact same reasoning.             
+
+QED.                                                                                                                         
