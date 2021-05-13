@@ -29,4 +29,16 @@ Inductive case: (K-j)/n is upper bound for E, hence for any element x in E x <= 
 Suppose (K-j+1)/n is not an upper bound for E. But setting m = K-j would lead to a contradiction, hence the claim follows.                   
 L < K => K-L > 0 hence (K-(K-L))/n = L/n is an upper bound for E which is a contradiction.                                            
 
-QED.                         
+QED.                        
+
+Ex 5.5.3 Since (m-1)/n is not upper bound while m'/n is upper bound, then for some x in E (m-1)/n < x <= m'/n. Similarly, we            
+also have some y in E s.t. (m'-1)/n < y <= m'/n. Thus m-1 < m' and m'-1 < m => m <= m' and m' <= m => m = m'.                 
+
+QED.                  
+
+Ex 5.5.4 By Ex 5.4.4 we can some some positive integer M s.t. 0 < 1/M < eps, where eps > 0 is given. Thus for all n,n' >= M,            
+|qn - qn'| < eps and thus q is a Cauchy sequence. Since S = LIM(n -> INF)qn, for all n >= M we have |qn - qM| <= 1/M < eps.           
+Thus we have qM - 1/M <= qn <= qM + 1/M. Defining a new equivalent Cauchy sequence a where an = qn for all n < M and an = an for all        
+n >=M, we have that qM - 1/M <= S <= qM + 1/M => |S - qM| <= 1/M => |qM - S| <= 1/M as required.              
+
+QED.                                                                              
