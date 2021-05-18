@@ -31,3 +31,34 @@ y^n <= 0}. Then for any z > 0, z^n > 0 and thus not in the set. Hence supE = 0
 and hence x^(1/n) = 0^(1/n) = 0, which is a contradiction.            
 
 QED.             
+
+(d) x > y <=> x^(1/n) > y^(1/n):            
+(=>): Suppose x > y => x^(1/n) <= y^(1/n). But 0 <= x^(1/n)n <= y^(1/n)n => x <= y                
+by (a), which is a contradiction.           
+(<=): Suppose x^(1/n) > y^(1/n), then x > y >= 0.                 
+
+QED.              
+
+(e) x > 1 => x^(1/k) decreasing function, x < 1 => x^(1/k) increasing function, x = 1                 
+=> x^(1/k) = 1:               
+Let a > b be 2 positive integers. If x > 1, suppose x^(1/a) >= x^(1/b). Then x^b >= x^a.                
+Since a > b, a = b + r for some positive integer r. Hence x^b >= x^b x^r. Given x > 1,            
+let inductive hypothesis be x^n > 1 for all positive integer n.             
+Base case: x > 1              
+Inductive case: x^(n+1) = x^n x > x > 1                 
+Set n = r, we have x^r > 1 => x^b > x^b x^r which is a contradiction.                 
+If x < 1, let c > d be 2 positive integers. Suppose x^(1/c) <= x^(1/d). Then x^d <= x^c.            
+c = d + r => x^d >= x^d x^r, using the previous induction forms a contradiction.               
+If x = 1, 1^k = 1 by (a) hence 1 = 1^(1/k).               
+
+QED.                  
+
+(f) (xy)^(1/n) = x^(1/n) y^(1/n):             
+(xy)^(1/n)n = xy. (x^(1/n)y^(1/n))^n = (x^1/n)n (y^1/n)n = xy = (xy)^(1/n)n.              
+
+QED.            
+
+(g) (x^(1/n))^(1/m) = x^(1/nm):                   
+((x^(1/n))^(1/m))^mn = (((x^(1/n))^(1/m))^m)^n = (x^(1/nm))^nm.             
+
+QED.                                         
