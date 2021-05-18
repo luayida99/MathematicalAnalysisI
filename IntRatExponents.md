@@ -61,4 +61,50 @@ QED.
 (g) (x^(1/n))^(1/m) = x^(1/nm):                   
 ((x^(1/n))^(1/m))^mn = (((x^(1/n))^(1/m))^m)^n = (x^(1/nm))^nm.             
 
-QED.                                         
+QED.                        
+
+Ex 5.6.2 Let x,y > 0 be positive reals, q,r be rationals.           
+
+(a) x^q is a positive real:              
+For integers a,b, q = a/b. x^q = (x^a)^(1/b) which is positive.           
+
+(b) x^(q+r) = x^q x^r and (x^q)^r = x^(qr):               
+q = a/b, r = c/d. x^(q+r) = x^((ad+bc)/bd) => x^((q+r)bd) = x^(ad+bc).            
+(x^q x^r)^bd = (x^(a/b) x^(c/d))^bd = x^(abd/b) x^(bcd/d) = x^ad x^bc = x^(ad+bc).          
+(x^q x^r)^bd = x^(q+r)^bd => x^(q+r) = x^q x^r.             
+
+((x^q)^r)^bd = (x^(ac/bd))^bd = x^ac. (x^qr)^bd = (x^(ac/bd))^bd = x^ac.              
+By cancellation law the result follows.             
+
+(c) x^(-q) = 1/x^q:             
+Let induction hypothesis be x^-n = 1/x^n for some integer n.              
+Base case: x^0 = 1/x^0 = 1.             
+Inductive case: x^-(n+1) = x^-1 (1/x^n) = 1/x (1/x^n) = 1/x^(n+1)             
+q = a/b, x^((-a)/b) = (x^(-a))^(1/b) = (1/x^a)^(1/b) = (1/x^(a/b)) = 1/x^q                
+
+(d) q > 0, x > y <=> x^q > y^q:             
+(=>): q = a/b, x^a > y^a => (x^a)^(1/b) > (y^a)^(1/b) => x^q > y^q                 
+(<=): q = a/b, (x^a)^(1/b) > (y^a)^(1/b) => x^a > y^a => x > y            
+
+(e) x > 1 => x^q > x^r <=> q > r. x < 1 => x^q > x^r <=> q < r:             
+q = a/b, r = c/d.             
+If x > 1, we prove the following:             
+(=>): q > r => ad > bc => ad-bc > 0. x > 1 => x^(1/k) > 1^(1/k) = 1 for some integer k.               
+Let induction hypothesis be (x^(1/k))^n > 1.          
+Base case: x^(1/k) > 1 as before.           
+Inductive case: (x^(1/k))^(n+1) > x^(1/k) * 1 = x^(1/k) > 1.              
+Hence x^(ad/bc) > 1 => x^ad > x^bc => x^(a/b) > x^(c/d) => x^q > x^r.                 
+(<=): x^q > x^r => (x^a/b)^bd > (x^(c/d))^bd => x^ad > x^bc => x^(ad-bc) > 1.           
+Suppose ad-bc <= 0, x^(ad-bc) = 1/x^(e) <= 1 which is a contradiction. Hence ad-bc > 0 =>                
+ad > bc => a/b > c/d => q > r.                     
+The x < 1 case is similar.                    
+
+QED.            
+
+Ex 5.6.3 x is real number => |x| = (x^2)^(1/2).               
+
+x = 0: |0| = 0, (0^2)^(1/2) = 0.              
+x > 0: |x| = x, (x^2)^(1/2) = x.            
+x < 0: -x > 0, ((-x)^2)^(1/2) = -x. |x| = -x.           
+
+QED.                                
