@@ -6,8 +6,7 @@ Assume P(n) is true i.e. n x m = m x n
 To prove P(n+1) is true i.e. (n++) x m = m x (n++)        
 LHS = (n x m) + m by Definition 2.3.1     
     = (m x n) + m by inductive hypothesis     
-    = m x (n++) 
-
+    = m x (n++)     
 QED.      
 
 Ex 2.3.2 Prove that positive natural numbers have no zero divisors.     
