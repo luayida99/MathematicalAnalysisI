@@ -16,3 +16,35 @@ we can find an N >= m s.t. |an - L| <= eps for all n >= N.
 By Definition 6.1.5, we have that an is eps-close to L for all n >= N. Since eps can be arbitrarily chosen, it    
 follows that an converges to L.                 
 QED.                    
+
+Ex 6.1.3            
+(=>): For some eps > 0, there exists N >= m s.t. |an - c| <= eps for all n >= N. Since m' >= m,                 
+m' = m + k, k is a non-negative integer. Hence for all n >= m' |an - c| <= eps hence an converges to c.           
+(<=): For some eps > 0, there exists an N >= m' s.t. |an - c| <= eps for all n >=  N.Then N >= m' >= m          
+hence |an - c| <= eps for all n >= m and an converges to c.                 
+QED.
+
+Ex 6.1.4 
+(=>): For some eps > 0, there exists N >= m s.t. |an - c| <= eps for all n >= N. n+k >= n >= N, thus            
+|an+k - c| <= eps for all n >= N.               
+(<=): For some eps > 0, there exists N >= m s.t. |an+k - c| <= eps for all n >= N. Choose N' = N + k <= n          
+then N <= n - k.  Thus |an - c| <= eps and hence converges to c.                
+QED.
+
+Ex 6.1.5                
+For some eps > 0, there exists N >= m s.t. |aj - L| <= eps/2 for all j >= N. Similarly there exists             
+N' >= m s.t. |ak - L| <= eps/2 for all k >= N'. Then |aj - ak| <= |aj - L| + |ak - L| <= eps for all            
+j,k >= max(N, N').                  
+QED.
+
+Ex 6.1.6            
+Assume for sake of contradfiction an doesn't converge to L. Then for some eps > 0 there exists N >= m           
+s.t. |an - L| > eps for all n >= N. Since an is Cauchy, the exists N' >= m s.t. |aj - ak| <= eps/2 for             
+all j,k >= N'. Then there exists n0 >= N' s.t. |an0 - L| > eps, |an - an0| <= eps/2 for all n >= N'.            
+Hence an0 - eps/2 <= an <= an0 + eps/2.                         
+
+If an0 - L is nonnegative an0 - L > eps, an0 - eps/2 <= an for all n >= N'. Hence an > L + eps/2.           
+By defining a new equivalent sequence bn s.t. bn > L + eps/2 we have L >= L + eps/2 which is a contradiction.      
+If an0 - L is negative L - an0 > eps, an <= an0 + eps/2 for all n >= N'. Hence an < L - eps/2.              
+Defining a new equivalent sequence then yields L <= L - eps/2 which is a contradiction.                 
+QED.                    
